@@ -1,4 +1,4 @@
-﻿using BepInEx;
+using BepInEx;
 using Comfort.Common;
 using EFT;
 using EFT.AssetsManager;
@@ -31,7 +31,7 @@ namespace TYR_DeClutterer
         public static int DefaultpixelLightCount = 0;
         public static ShadowQuality DefaultShadows;
         public static int DefaultshadowCascades = 0;
-        public static int DefaultmasterTextureLimit = 0;
+        // public static int DefaultmasterTextureLimit = 0;
         public static float DefaultlodBias = 0f;
 
         private static GameWorld _gameWorld;
@@ -108,7 +108,7 @@ namespace TYR_DeClutterer
             DefaultpixelLightCount = QualitySettings.pixelLightCount;
             DefaultShadows = QualitySettings.shadows;
             DefaultshadowCascades = QualitySettings.shadowCascades;
-            DefaultmasterTextureLimit = QualitySettings.masterTextureLimit;
+            // DefaultmasterTextureLimit = QualitySettings.masterTextureLimit;
             DefaultlodBias = QualitySettings.lodBias;
         }
 
@@ -194,12 +194,12 @@ namespace TYR_DeClutterer
             Configuration.framesaverReflectionsEnabledConfig.SettingChanged += OnApplyVisualsChanged;
             Configuration.framesaverLightingShadowsEnabledConfig.SettingChanged += OnApplyVisualsChanged;
             Configuration.framesaverWeatherUpdatesEnabledConfig.SettingChanged += OnApplyVisualsChanged;
-            Configuration.framesaverTexturesEnabledConfig.SettingChanged += OnApplyVisualsChanged;
+            // Configuration.framesaverTexturesEnabledConfig.SettingChanged += OnApplyVisualsChanged;
             Configuration.framesaverLODEnabledConfig.SettingChanged += OnApplyVisualsChanged;
             Configuration.framesaverParticleBudgetDividerConfig.SettingChanged += OnApplyVisualsChanged;
             Configuration.framesaverPixelLightDividerConfig.SettingChanged += OnApplyVisualsChanged;
             Configuration.framesaverShadowDividerConfig.SettingChanged += OnApplyVisualsChanged;
-            Configuration.framesaverTextureSizeConfig.SettingChanged += OnApplyVisualsChanged;
+            // Configuration.framesaverTextureSizeConfig.SettingChanged += OnApplyVisualsChanged;
             Configuration.framesaverLODBiasConfig.SettingChanged += OnApplyVisualsChanged;
             Configuration.framesaverFireAndSmokeEnabledConfig.SettingChanged += OnApplyVisualsChanged;
         }
@@ -221,7 +221,7 @@ namespace TYR_DeClutterer
 
                 GraphicsUtils.SetLightingShadowQuality();
 
-                GraphicsUtils.SetTextureQuality();
+                // GraphicsUtils.SetTextureQuality();
 
                 GraphicsUtils.SetLodBiasQuality();
             }
