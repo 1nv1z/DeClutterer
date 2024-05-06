@@ -1,4 +1,4 @@
-﻿using Comfort.Common;
+using Comfort.Common;
 using UnityEngine;
 
 namespace TYR_DeClutterer.Utils
@@ -65,32 +65,32 @@ namespace TYR_DeClutterer.Utils
             }
         }
 
-        public static void SetTextureQuality()
-        {
-            if (Configuration.framesaverTexturesEnabledConfig.Value)
-            {
-                if (Singleton<SharedGameSettingsClass>.Instance.Graphics.Settings.TextureQuality.Value == 2)
-                {
-                    QualitySettings.masterTextureLimit = 0;
-                }
-                else
-                {
-                    QualitySettings.masterTextureLimit = Configuration.framesaverTextureSizeConfig.Value;
-                }
-            }
-            else
-            {
-                if (Singleton<SharedGameSettingsClass>.Instance.Graphics.Settings.TextureQuality.Value == 2)
-                {
-                    QualitySettings.masterTextureLimit = 0;
-                }
-                else
-                {
-                    QualitySettings.masterTextureLimit = DeClutter.DefaultmasterTextureLimit;
-                }
-            }
-        }
-
+ //       public static void SetTextureQuality()
+ //       {
+ //           if (Configuration.framesaverTexturesEnabledConfig.Value)
+ //           {
+ //               if (Singleton<SharedGameSettingsClass>.Instance.Graphics.Settings.TextureQuality.Value == 2)
+ //               {
+ //                   QualitySettings.masterTextureLimit = 0;
+ //               }
+ //               else
+ //               {
+ //                   QualitySettings.masterTextureLimit = Configuration.framesaverTextureSizeConfig.Value;
+ //               }
+ //           }
+ //           else
+ //           {
+ //               if (Singleton<SharedGameSettingsClass>.Instance.Graphics.Settings.TextureQuality.Value == 2)
+ //               {
+ //                   QualitySettings.masterTextureLimit = 0;
+ //               }
+ //               else
+ //               {
+ //                   QualitySettings.masterTextureLimit = DeClutter.DefaultmasterTextureLimit;
+ //               }
+ //           }
+ //       }
+ //
         public static void SetLodBiasQuality()
         {
             if (Configuration.framesaverLODEnabledConfig.Value)
@@ -116,14 +116,14 @@ namespace TYR_DeClutterer.Utils
             QualitySettings.shadows = DeClutter.DefaultShadows;
             QualitySettings.shadowCascades = DeClutter.DefaultshadowCascades;
 
-            if (Singleton<SharedGameSettingsClass>.Instance.Graphics.Settings.TextureQuality.Value == 2)
-            {
-                QualitySettings.masterTextureLimit = 0;
-            }
-            else
-            {
-                QualitySettings.masterTextureLimit = DeClutter.DefaultmasterTextureLimit;
-            }
+//            if (Singleton<SharedGameSettingsClass>.Instance.Graphics.Settings.TextureQuality.Value == 2)
+//            {
+//                QualitySettings.masterTextureLimit = 0;
+//            }
+//            else
+//            {
+//                QualitySettings.masterTextureLimit = DeClutter.DefaultmasterTextureLimit;
+//            }
 
             QualitySettings.lodBias = DeClutter.DefaultlodBias;
         }
